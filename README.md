@@ -12,7 +12,7 @@
 Nhóm sử dụng các mô hình kết hợp như: **Resnet+LSTM**, **Resnet+Transformer** và **Resnet+Timeformers** được sử dụng để nâng cao độ chính xác.
 Các mô hình dự đoán trong thời gian ngắn là 5 phút
 
-## 🧠 Kiến trúc và kết quả của từng mô hình được trình bày trong thư mục report có tên file là: BTL_TS.docx
+## 🧠 Kiến trúc và kết quả của từng mô hình được trình bày trong thư mục report
 
 ## 📂 Cấu trúc thư mục chung
 **BTL_TIMESERIES/**
