@@ -14,11 +14,12 @@ Các mô hình dự đoán trong thời gian ngắn là 5 phút
 
 ## 🧠 Kiến trúc và kết quả của từng mô hình được trình bày trong thư mục report có tên file là: BTL_TS.docx
 
-## 📂 Cấu trúc thư mục
+## 📂 Cấu trúc thư mục chung
 **BTL_TIMESERIES/**
 - ├── data/ # Dữ liệu ảnh & bức xạ 
 - ├── CodeModel/ # Phần xây dựng và huấn luyện mô hình
 - ├── Best_Model/ # Lưu kết quả của các mô hình
+- ├── Demo/ # Demo của mô hình
 - ├── reports/ # Báo cáo
 - ├── requirements.txt # Danh sách thư viện
 - └── README.md
