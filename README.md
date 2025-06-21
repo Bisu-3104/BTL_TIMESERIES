@@ -18,7 +18,7 @@ Các mô hình dự đoán trong thời gian ngắn là 5 phút
 **BTL_TIMESERIES/**
 - ├── data/ # Dữ liệu ảnh & bức xạ 
 - ├── CodeModel/ # Phần xây dựng và huấn luyện mô hình
-- ├── BestModel/ # Lưu kết quả của các mô hình
+- ├── Best_Model/ # Lưu kết quả của các mô hình
 - ├── reports/ # Báo cáo
 - ├── requirements.txt # Danh sách thư viện
 - └── README.md
