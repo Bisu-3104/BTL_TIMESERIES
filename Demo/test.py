@@ -6,7 +6,7 @@ from PIL import Image
 import torchvision.transforms as transforms
 from torchvision import models
 from model import MITransformerModel
-import os, random, re  # 🔍 Thêm re để xử lý regex
+import os, random, re 
 
 def set_seed(seed=42):
     random.seed(seed)
