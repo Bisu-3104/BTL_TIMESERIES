@@ -9,10 +9,10 @@
 - **Ảnh Sky Cam** (ảnh chụp bầu trời thời gian thực)
 - **Các dữ liệu được thu thập sau mỗi 10s**
 
-Nhóm sử dụng các mô hình kết hợp như: **Resnet+LSTM**, **Resnet+Transformer** và **Resnet+Timeformers** được sử dụng để nâng cao độ chính xác.
+Nhóm sử dụng các mô hình kết hợp như: **Resnet+LSTM**, **Resnet+Transformer** và **Resnet+Timesformer** được sử dụng để nâng cao độ chính xác.
 Các mô hình dự đoán trong thời gian ngắn là 5 phút
 
-## 🧠 Kiến trúc và kết quả của từng mô hình được trình bày trong thư mục reports
+## 🧠 Kiến trúc và kết quả của từng mô hình được trình bày trong thư mục Reports
 
 ## 📂 Cấu trúc thư mục chung
 **BTL_TIMESERIES/**
