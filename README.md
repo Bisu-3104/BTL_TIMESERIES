@@ -29,3 +29,17 @@ Các mô hình dự đoán trong thời gian ngắn là 5 phút
 - Tải dữ liệu và mô hình muốn chạy về 
 - Sử dụng trên kaggle hoặc môi trường bất kỳ (ưu tiên trên kaggle vì đã tải sẵn dữ liệu và có GPU để huấn luyện mô hình)
 - Chạy mô hình
+
+
+## 📂 Cấu trúc thư mục Demo
+**BTL_TIMESERIES/Demo/**
+- ├── data/ # Dữ liệu ảnh & bức xạ
+- ├── Model.pth/ # lưu kết quả các mô hình
+- ├── Model.py/ #Phần xây dựng và huấn luyện mô hình
+- ├── requirements.txt # Danh sách thư viện
+- └── Test.py # xây dựng web
+  
+## 🚀 Cách chạy Demo 
+- Tải thư mục Demo về máy
+- Truy cập vào thư mục
+- Chạy file Test.py bằng câu lệnh: "streamlit run test.py"
