@@ -26,7 +26,7 @@ Các mô hình dự đoán trong thời gian ngắn là 5 phút
 
 ## 🚀 Cách chạy mô hình
 
-- Truy cập vào thư mục Codemodels
+- Truy cập vào thư mục CodeModel
 - Tải dữ liệu và mô hình muốn chạy về 
 - Sử dụng trên kaggle hoặc môi trường bất kỳ (ưu tiên trên kaggle vì đã tải sẵn dữ liệu và có GPU để huấn luyện mô hình)
 - Chạy mô hình
