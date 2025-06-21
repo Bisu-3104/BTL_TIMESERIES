@@ -8,7 +8,6 @@ from torchvision import models
 from model import MITransformerModel
 import os, random, re  # 🔍 Thêm re để xử lý regex
 
-# 🎯 Hàm set_seed
 def set_seed(seed=42):
     random.seed(seed)
     os.environ['PYTHONHASHSEED'] = str(seed)
@@ -22,7 +21,6 @@ set_seed()
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# 🧠 ResNet50 feature extractor
 resnet = models.resnet50(pretrained=True)
 modules = list(resnet.children())[:-2]
 cnn_backbone = nn.Sequential(*modules, nn.AdaptiveAvgPool2d((1, 1)))
@@ -33,7 +31,6 @@ feature_extractor = nn.Sequential(
 ).to(device)
 feature_extractor.eval()
 
-# 🧠 Load model MITransformer
 model = MITransformerModel(img_dim=512, rad_dim=1, d_model=64, nhead=4, num_layers=2).to(device)
 try:
     model.load_state_dict(torch.load("model.pth", map_location=device))
@@ -54,7 +51,6 @@ transform = transforms.Compose([
 
 st.title("📸 Dự báo bức xạ mặt trời từ chuỗi ảnh")
 
-# 🖼️ Tải chuỗi ảnh
 uploaded_files = st.file_uploader(
     "Tải lên chuỗi ảnh (theo thứ tự thời gian)",
     type=["jpg", "jpeg", "png"],
@@ -65,7 +61,6 @@ radiance_values = []
 if uploaded_files:
     st.subheader("📝 Nhập giá trị bức xạ quá khứ tương ứng với từng ảnh:")
     for file in uploaded_files:
-        # ✅ Khớp số trước .jpg (ví dụ: 13.2 từ _13.2.jpg)
         match = re.search(r'([0-9]+(?:\.[0-9]+)?)\.jpg$', file.name.lower())
         try:
             default_val = float(match.group(1)) if match else 100.0
@@ -85,7 +80,6 @@ if uploaded_files:
 
     if st.button("📈 Dự đoán"):
         try:
-            # 🧠 Trích xuất đặc trưng chuỗi ảnh
             img_feats = []
             for file in uploaded_files:
                 img = Image.open(file).convert("RGB")
@@ -97,7 +91,6 @@ if uploaded_files:
             img_feat_seq = torch.stack(img_feats, dim=1)  # (1, T, 512)
             rad_seq = torch.tensor(radiance_values, dtype=torch.float32).view(1, -1, 1).to(device)
 
-            # 🎯 Dự báo
             with torch.no_grad():
                 output = model(img_feat_seq, rad_seq)
                 prediction = output.item()
