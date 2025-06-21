@@ -35,9 +35,9 @@ Các mô hình dự đoán trong thời gian ngắn là 5 phút
 **BTL_TIMESERIES/Demo/**
 - ├── data/ # Dữ liệu ảnh & bức xạ
 - ├── Model.pth/ # lưu kết quả các mô hình
-- ├── Model.py/ #Phần xây dựng và huấn luyện mô hình
+- ├── Model.py/ #Phần mô hình
 - ├── requirements.txt # Danh sách thư viện
-- └── Test.py # xây dựng web
+- └── Test.py # Xây dựng web
   
 ## 🚀 Cách chạy Demo 
 - Tải thư mục Demo về máy
